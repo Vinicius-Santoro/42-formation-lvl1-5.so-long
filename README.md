@@ -75,7 +75,35 @@ else
 ```
 _Estrutura condicional para verificação de erros no input do terminal._
 
+- Se, a quantidade de argumentos for < 2, então o usuário receberá a mensagem de erro 5, que é: `map file missing.`
+- Se não se, quantidade de argumentos > 2, então o usuário receberá a mensagem de erro 6, que é: `too many arguments.`
+- Se não, filename recebe o nome do mapa.
+- Observação: O índice 0 é o `solong.a` e o índice 1 é o `map.ber`. argv[0] = `solong.a` e argv[1] = `map1.ber`
 
+<h1></h1>
+
+```c
+validate_map(filename, &my_data);
+```
+_Esta função valida se o mapa (arquivo.ber) é valido ou não. O funcionamento dessa função é:_
+
+```c
+void	validate_map(const char *filename, t_data *my_data)
+{
+	int		opened_map;
+
+	check_file_ext(filename);
+	opened_map = open(filename, O_RDONLY);
+	if (opened_map < 0)
+		print_error(7);
+	else
+	{
+		init_params(my_data);
+		generate_map(opened_map, my_data);
+		close(opened_map);
+	}
+}
+```
 
 
 
