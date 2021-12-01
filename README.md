@@ -6,3 +6,41 @@
 textures, sprites and some very basic gameplay elements.
 
 <h1></h1>
+
+### _1: solong.c_
+
+```c
+
+#include "../../includes/mandatory/so_long.h"
+
+static void	check_file_ext(const char *filename);
+static void	init_params(t_data *my_data);
+
+int	main(int argc, char **argv)
+{
+	const char	*filename;
+	t_data		my_data;
+
+	if (argc < 2)
+		print_error(5);
+	else if (argc > 2)
+		print_error(6);
+	else
+		filename = argv[1];
+	validate_map(filename, &my_data);
+	my_data.game.mlx = mlx_init();
+	my_data.game.mlx_win = mlx_new_window(my_data.game.mlx, my_data.map.width,
+			my_data.map.height, "So long");
+	mlx_hook(my_data.game.mlx_win, 33, 1L << 17, close_window, &my_data);
+	mlx_key_hook(my_data.game.mlx_win, &key_press, &my_data);
+	render_map(&my_data);
+	mlx_expose_hook(my_data.game.mlx_win, &render_map, &my_data);
+	mlx_loop(my_data.game.mlx);
+	free(&my_data);
+}
+```
+<h1></h1>
+
+```
+main(int argc, char **argv)
+```
