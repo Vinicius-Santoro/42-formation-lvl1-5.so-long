@@ -49,6 +49,32 @@ _Usamos esses parâmetros na main para receber valores inputados no terminal._
 - `argc`: quantidade de parâmetros a serem recebidos.
 - `argv`: nome dos parâmetros a serem recebidos.
 
+<h1></h1>
+
+```c
+const char	*filename;
+```
+_Definição da variável para o mapa do jogo._
+
+<h1></h1>
+
+```c
+t_data		my_data;
+```
+_Definição da variável do tipo `t_data` para armazenar todos os dados do jogo._
+
+<h1></h1>
+
+```c
+if (argc < 2)
+	print_error(5);
+else if (argc > 2)
+	print_error(6);
+else
+	filename = argv[1];
+```
+_Estrutura condicional para verificação de erros no input do terminal._
+
 
 
 
