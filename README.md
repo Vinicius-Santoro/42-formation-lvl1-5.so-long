@@ -41,6 +41,15 @@ int	main(int argc, char **argv)
 ```
 <h1></h1>
 
-```
+```c
 main(int argc, char **argv)
 ```
+_Usamos esses parâmetros na main para receber valores inputados no terminal._
+
+- `argc`: quantidade de parâmetros a serem recebidos.
+- `argv`: nome dos parâmetros a serem recebidos.
+
+
+
+
+
