@@ -5,73 +5,52 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/01/05 14:21:14 by ldatilio          #+#    #+#              #
-#    Updated: 2022/01/05 21:27:19 by ldatilio         ###   ########.fr        #
+#    Created: 2021/09/01 10:39:53 by ldatilio          #+#    #+#              #
+#    Updated: 2022/01/03 16:51:02 by ldatilio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			:=	so_long
-NAME_BONUS		:=	so_long_bonus
+CC 		:= 	gcc
+FLAGS 	:= 	-Wall -Wextra -Werror
+RM		:=	rm -f
 
-CC				:=	gcc
+NAME	:=	libft.a
 
-CFLAGS			:=	-Wall -Werror -Wextra
-LIB				:=	-lbsd -lmlx -lXext -lX11 -lm -lz
+SRCS	:= 	ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
+			ft_tolower.c ft_toupper.c ft_strlen.c ft_strlcpy.c ft_strlcat.c  \
+			ft_atoi.c ft_strncmp.c ft_strnstr.c ft_strchr.c ft_strrchr.c 	 \
+			ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c 	 \
+			ft_memcmp.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c 	 \
+			ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c 	 \
+			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c 	 \
+			ft_memccpy.c get_next_line.c
 
-LIBFT			:=	./libft/libft.a
+BONUS_S	:=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c 		\
+			ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c 	\
+			ft_lstclear.c ft_lstiter.c ft_lstmap.c			\
 
-FOLDER			:=	./src/
-FOLDER_BONUS	:=	./src_bonus/
+OBJS	:=	$(SRCS:.c=.o)
+BONUS_O :=	$(BONUS_S:.c=.o)
 
-SRC		:=		$(addprefix $(FOLDER),	\
-				verify_error.c			\
-				exit_free.c				\
-				move.c					\
-				render_game.c			\
-				so_long.c				\
-				verify_map.c			\
-				)
-SRC_BONUS =		$(addprefix $(FOLDER_BONUS),	\
-				so_long.c						\
-				start.c							\
-				verify_map.c					\
-				render_game.c					\
-				move.c							\
-				exit.c							\
-				so_long_utils.c					\
-				free_solong.c					\
-				error.c							\
-				load_hero.c						\
-				)
+all:		$(NAME)
 
-OBJS		:=	${SRC:%.c=%.o}
-OBJS_BONUS	:=	${SRC_BONUS:.c=.o}
+$(NAME):	$(OBJS) $(BONUS_O)
+			ar -rcs $(NAME) $(OBJS)
+
+bonus:		$(NAME) $(BONUS_O)
+			ar -rcs $(NAME) $(BONUS_O)
 
 .c.o:
-				$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
-
-all:			$(NAME)
-bonus: 			$(NAME_BONUS)
-
-$(NAME): 		$(LIBFT) $(OBJS)
-				$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIB) $(LIBFT)
-
-$(NAME_BONUS):	$(LIBFT) $(OBJS_BONUS)
-				$(CC) $(CFLAGS) -o $(NAME_BONUS) $(OBJS_BONUS) $(LIB) $(LIBFT)
-
-$(LIBFT):
-				make bonus -C ./libft
+			$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
 
 clean:
-				rm -f $(OBJS) $(OBJS_BONUS)
-				make clean -C ./libft
+			$(RM) $(OBJS) $(BONUS_O)
 
-fclean:			clean
-				rm -f $(NAME) $(NAME_BONUS)
-				make fclean -C ./libft
+fclean: 	clean
+			$(RM) $(NAME)
 
-re:				fclean all
+re:			fclean all
 
-rebonus:		fclean bonus
+rebonus:	fclean bonus
 
-.PHONY: 		all, clean, fclean, re, bonus, rebonus
+.PHONY: 	all clean fclean re bonus rebonus
