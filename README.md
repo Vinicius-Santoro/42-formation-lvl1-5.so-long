@@ -5,7 +5,6 @@
 - This project is a very small 2D game. It is built to make we work with
 textures, sprites and some very basic gameplay elements.
 
----
 
 ## _This game was like this:_
 
