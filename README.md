@@ -45,7 +45,7 @@ You can close the game with `esc` or `Q`.
 -   [so_long.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/02.so_long.md)
 -   [verify_error.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/03.verify_error.md)
 -   [read_map.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/04.read_map.md)
--   [render_game.c](https://github.com/vangoncalez/42sp_born2beroot/blob/main/parte_01.md)
+-   [render_game.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/05.render_game.md)
 -   [player_move.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/06.move.md)
 -   [exit_free.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/07.exit_free.md)
 
