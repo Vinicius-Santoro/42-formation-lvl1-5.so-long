@@ -35,7 +35,7 @@ See some examples in the ``./assets/maps`` folder of this project.
 ### _Controls_
 Use ``WASD`` to move. You move one tile at a time. Enemies move after you do, also one tile at a time, and will kill you when you move into their tile or they move into yours. After picking up all weeds, the exits open and you may leave to see how many moves you’ve used to solve the map.
 
-You can close the game with `esc` or `Q`.
+You can close the game with `ESC` or `Q`.
 
 
 ## _How i did (mandatory)_
@@ -45,7 +45,7 @@ You can close the game with `esc` or `Q`.
 -   [verify_error.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/03.verify_error.md)
 -   [read_map.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/04.read_map.md)
 -   [render_game.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/05.render_game.md)
--   [player_move.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/06.move.md)
+-   [move.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/06.move.md)
 -   [exit_free.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/07.exit_free.md)
 
 
@@ -55,5 +55,5 @@ You can close the game with `esc` or `Q`.
 -   [verify_error.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/03.verify_error.md)
 -   [read_map.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/10.read_map.md)
 -   [render_game.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/11.render_game.md)
--   [player_move.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/12.move.md)
+-   [move.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/12.move.md)
 -   [exit_free.c](https://github.com/Vinicius-Santoro/42-formation-lvl1-5.so-long/blob/main/READMES/13.exit_free.md)
