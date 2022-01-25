@@ -8,8 +8,7 @@ textures, sprites and some very basic gameplay elements.
 
 ## _This game was like this:_
 
-Aqui será um gif.
-
+![so_long](https://user-images.githubusercontent.com/83036509/150965119-a96d5590-3971-43d0-959f-ee0d0f237d9e.gif)
 
 ## _How to Play_
 
