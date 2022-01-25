@@ -32,7 +32,7 @@ The game is able to play any map you want as long as it follow some specific rul
 See some examples in the ``./assets/maps`` folder of this project.
 
 ### _Controls_
-Use ``WASD`` to move. You move one tile at a time. Enemies move after you do, also one tile at a time, and will kill you when you move into their tile or they move into yours. After picking up all weeds, the exits open and you may leave to see how many moves you’ve used to solve the map.
+Use WASD to move. You move one tile at a time. After picking up all weeds, the exits open and you may leave to see how many moves you’ve used to solve the map.
 
 You can close the game with `ESC` or `Q`.
 
